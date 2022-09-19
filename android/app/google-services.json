@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1091060576717",
+    "project_id": "nova-545cd",
+    "storage_bucket": "nova-545cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1091060576717:android:ecb3447437c671ce4e5484",
+        "android_client_info": {
+          "package_name": "com.flutter.doctoworld.doctoworld_doctor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1091060576717-7htnt360pfliqe8mkog9djbnfbhjmafe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVvSuTCgLKmPwnD9RSGG1NCBV_UwgZz-4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1091060576717-7htnt360pfliqe8mkog9djbnfbhjmafe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
