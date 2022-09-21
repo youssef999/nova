@@ -141,13 +141,16 @@ class _RegistrationUIState extends State<RegistrationUI> {
                             'time':"",
                             "day":"",
                             "comment":[]
-                          });
+                          }).then((value) =>
 
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) =>
-                                BottomNavigation()),
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) =>
+                                    BottomNavigation()),
+                              )
                           );
+
+
                         });
 
                       } catch (e) {
