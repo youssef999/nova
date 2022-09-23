@@ -28,14 +28,13 @@ class _ChangeLanguagePageState extends State<ChangeLanguagePage> {
   void initState() {
     super.initState();
     _languageCubit = BlocProvider.of<LanguageCubit>(context);
-
   }
 
   @override
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
     final box = GetStorage();
-    String email=box.read('email')??"x";
+    String email=box.read('email')??"";
     return BlocBuilder<LanguageCubit, Locale>(
       builder: (context, locale) {
         return Scaffold(
@@ -121,7 +120,7 @@ class _ChangeLanguagePageState extends State<ChangeLanguagePage> {
                           //       LoginNavigator()),
                           // );
                           Navigator.pushNamed(context, PageRoutes.loginNavigator);
-                          if(email=='x'){
+                          if(email==''){
                             _languageCubit.setCurrentLanguage(selectedLocal!, true);
                             Navigator.pushReplacement(
                               context,

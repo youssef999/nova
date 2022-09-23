@@ -62,12 +62,11 @@ class _AccountPageState extends State<AccountPage> {
         //Navigator.pushNamed(context, PageRoutes.languagePage);
       }),
       MenuTile(locale.contactUs, locale.letUsHelpYou, Icons.mail, () {
+
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) =>SupportPage()),
         );
-
-
        // Navigator.pushNamed(context, PageRoutes.supportPage);
       }),
       // MenuTile(locale.tnC, locale.policies, Icons.assignment, () {
@@ -78,29 +77,20 @@ class _AccountPageState extends State<AccountPage> {
       // }),
       MenuTile(locale.logout, locale.seeYouSoon, Icons.exit_to_app, () {
 
-        final box = GetStorage();
-        box.remove('email');
-        box.remove('name');
-        print("removed");
-        FirebaseAuth.instance.signOut();
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => LoginNavigator()),
-        );
-
-        // profilePage: (context) => ProfilePage(),
-        // supportPage: (context) => SupportPage(),
-        // faqPage: (context) => FAQPage(),
-        // tncPage: (context) => TnCPage(),
-        // bottomNavigation: (context) => BottomNavigation(),
-        // addHospital: (context) => AddHospital(),
-        // addService: (context) => AddService(),
-        // addSpecialization: (context) => AddSpecialization(),
-        // languagePage: (context) => ChangeLanguagePage(),
-        // loginNavigator: (context) => LoginNavigator(),
-        // Navigator.pushNamed(context, PageRoutes.loginNavigator);
-      //  Get.off(ChangeLanguagePage());
-      //  Phoenix.rebirth(context);
+        // final box = GetStorage();
+        // box.remove('email');
+        // box.remove('name');
+        // print("removed");
+     //   FirebaseAuth.instance.signOut().then((value) =>
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) =>ChangeLanguagePage()),
+          );
+       //);
+        // Navigator.push(
+        //   context,
+        //   MaterialPageRoute(builder: (context) => LoginNavigator()),
+        // );
       }),
     ];
     return Scaffold(

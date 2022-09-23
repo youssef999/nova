@@ -87,7 +87,9 @@ class AuthViewModel extends GetxController {
       await _auth
           .signInWithEmailAndPassword(email: e, password: p)
           .then((value) async {
+
             print("vvvv");
+            print("email===="+e.toString());
             final box = GetStorage();
             box.write('email', e);
             box.write('pass',p);

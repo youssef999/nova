@@ -149,11 +149,11 @@ class _RegistrationUIState extends State<RegistrationUI> {
                                     BottomNavigation()),
                               )
                           );
-
-
                         });
 
-                      } catch (e) {
+                      }
+
+                      catch (e) {
 
                         await Flushbar(
                           title: 'Error',

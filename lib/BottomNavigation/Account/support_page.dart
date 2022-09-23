@@ -1,4 +1,5 @@
 import 'package:animation_wrappers/animation_wrappers.dart';
+import 'package:another_flushbar/flushbar.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:doctoworld_doctor/BottomNavigation/bottom_navigation.dart';
 import 'package:doctoworld_doctor/Components/custom_button.dart';
@@ -106,11 +107,13 @@ class _SupportPageState extends State<SupportPage> {
     await FirebaseFirestore.instance.collection('support').add({
     'email': _EmailController.text,
     'message': _MsgController.text,
-    }).then((value) {
-      Get.snackbar('DONE', locale.requestsent.toString(),
-          snackPosition: SnackPosition.TOP,
-          backgroundColor:Colors.green,
-          colorText: Colors.white);
+    }).then((value) async {
+      await Flushbar(
+          title: 'Done',
+          message:
+          locale.requestsent.toString(),
+      duration: Duration(seconds: 3),
+      ).show(context);
 
       Navigator.push(
         context,
